@@ -1,0 +1,244 @@
+.hero {
+  position: relative;
+  margin-bottom: 100px;
+  padding: 146px 10px 0;
+  min-height: 786px;
+
+  &__slider{
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 10px 52px 0 rgba(0,0,0,.21);
+    padding-bottom: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  &__slide{
+
+    &-picture{
+      display: block;
+      max-width: 355px;
+      margin: 0 auto 23px;
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+    }
+
+    &-text{
+      margin-bottom: 35px;
+      padding: 0 30px;
+      text-align: center;
+
+      h2{
+        margin-bottom: 13px;
+      }
+
+    }
+
+    &-btn-wrap{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+  }
+
+  &__slider-pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    z-index: 1;
+
+    span{
+      transition: background-color .3s ease;
+    }
+
+  }
+
+  &__link{
+    color: #9FB93C;
+    text-decoration: underline;
+  }
+
+  &__app-download{
+    display: block;
+    width: 187px;
+    height: 64px;
+    margin-bottom: 20px;
+
+    svg{
+      width: 100%;
+    }
+
+  }
+
+  &__back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 150px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    overflow: hidden;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .hero {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .hero {
+    min-height: auto;
+
+    &__slider{
+      max-width: 1000px;
+      padding-bottom: 0;
+    }
+
+    &__slide{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 20px;
+
+      &-picture{
+        display: flex;
+        align-items: flex-end;
+        width: 320px;
+        max-width: none;
+        margin: auto 0 0;
+        border-radius: 8px 0 0 8px;
+      }
+
+      &-text{
+        padding: 0;
+        text-align: left;
+      }
+
+      &-layout{
+        width: calc( 100% - 350px);
+        margin: 15px 0 70px;
+
+        .btn{
+          margin: 0;
+        }
+
+      }
+
+      &-btn-wrap{
+        flex-direction: row;
+      }
+
+    }
+
+    &__slider-pagination{
+      position: absolute;
+      right: 36px;
+      left: auto;
+      bottom: 34px;
+      width: auto;
+      margin: 0;
+    }
+
+    &__app-download {
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero {
+    margin-bottom: 151px;
+    padding-top: 250px;
+
+    &__slide{
+      padding-right: 87px;
+
+      &-picture{
+        width: 454px;
+      }
+
+      &-layout{
+        width: calc( 100% - 511px );
+      }
+
+    }
+
+    &__app-download {
+      bottom: 80px;
+      left: calc(50% + 11px);
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .hero {
+
+    &__slider-pagination{
+
+      span{
+
+        &:hover{
+          background-color: #648347;
+        }
+
+      }
+
+    }
+
+    &__app-download {
+
+      svg {
+        transform: translateZ(0);
+        transition: transform .3s ease;
+
+        * {
+          transform: translateZ(0);
+        }
+
+      }
+
+      &:hover svg {
+        transform: scale(1.05) translateZ(0);
+      }
+
+    }
+
+    &__link{
+      transition: color .3s ease;
+
+      &:hover{
+        color: #648347;
+        text-decoration: underline;
+      }
+
+    }
+
+    &__back{
+      max-width: 1200px;
+    }
+
+  }
+}
+

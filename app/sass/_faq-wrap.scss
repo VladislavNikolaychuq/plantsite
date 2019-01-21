@@ -1,0 +1,116 @@
+.faq-wrap {
+  width: calc( 100% - 40px );
+  max-width: 1000px;
+  margin: 0 auto 100px;
+
+  &__title{
+    max-width: 90%;
+    margin: 0 auto 50px;
+    color: #4A4A4A;
+    @include lato;
+    font-size: 48px;
+    line-height: 57px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__item{
+    margin-bottom: 15px;
+    padding: 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.21);
+    transition: box-shadow .3s ease;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    dt{
+      color: #4A4A4A;
+      font-weight: bold;
+      transition: margin-bottom .3s ease;
+    }
+
+    dd{
+      height: 0;
+      color: #878787;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity .3s ease;
+
+      p a{
+        color: #9FB93C;
+      }
+
+    }
+
+    &.is-open{
+
+      dt{
+        margin-bottom: 30px;
+      }
+
+      dd{
+        height: auto;
+        opacity: 1;
+      }
+
+      box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .faq-wrap {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .faq-wrap {
+    margin-bottom: 159px;
+
+    &__title {
+      max-width: none;
+      margin-bottom: 70px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .faq-wrap {
+
+  }
+}
+@media (min-width: $desktop) {
+  .faq-wrap {
+
+    &__item{
+      cursor: pointer;
+
+      &:hover{
+        box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+      }
+
+      dd{
+
+        p a{
+          transition: color .3s ease;
+
+          &:hover{
+            color: #648347;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
+

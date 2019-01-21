@@ -1,0 +1,191 @@
+.recipe-books-promo {
+  margin-bottom: 101px;
+
+  &__title{
+    max-width: 85%;
+    margin: 0 auto 30px;
+    color: #4A4A4A;
+    @include lato;
+    font-size: 48px;
+    line-height: 57px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__slider{
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  &__slide{
+
+    &-picture{
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto -118px;
+      box-shadow: -20px -10px 52px 0 rgba(0,0,0,0.2);
+
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+    }
+
+    &-text{
+      position: relative;
+      width: calc( 100% - 20px );
+      max-width: 355px;
+      margin: 0 auto;
+      padding: 31px 19px 76px;
+      border-radius: 8px;
+      box-shadow: 0 10px 52px 0 rgba(0,0,0,.21);
+      background-color: #fff;
+      color: #878787;
+      font-size: 18px;
+      line-height: 30px;
+      z-index: 1;
+      text-align: center;
+
+      dt{
+        position: relative;
+        margin-bottom: 34px;
+        padding: 0 11px;
+        color: #4A4A4A;
+        font-weight: bold;
+
+        &:after{
+          position: absolute;
+          bottom: -17px;
+          left: calc( 50% - 28px );
+          width: 56px;
+          border-bottom: 1px solid rgba(151,151,151,.3);
+          content: '';
+        }
+
+      }
+
+      dd {
+        padding: 0 11px;
+
+        p{
+          margin-bottom: 30px;
+        }
+
+      }
+
+    }
+
+    .btn{
+      display: inline-flex;
+      padding: 0 36px;
+    }
+
+  }
+
+  &__slider-pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    left: 0;
+    z-index: 1;
+
+    span{
+      transition: background-color .3s ease;
+    }
+
+  }
+  
+}
+@media (min-width: $phone-landscape) {
+  .recipe-books-promo {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .recipe-books-promo {
+
+    &__title{
+      margin-bottom: 71px;
+    }
+
+    &__slide{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      &-picture{
+        max-width: 675px;
+        margin: 0 auto;
+        box-shadow: -20px -10px 52px 0 rgba(0, 0, 0, 0.2), -84px 0 50px -20px rgba(0, 0, 0, 0.2);
+      }
+
+      &-text{
+        max-width: 374px;
+        margin: 0 10px 103px -343px;
+        padding: 80px 40px 79px;
+
+        dt{
+          width: 70%;
+          margin: 0 auto 33px;
+          padding: 0;
+
+          &:after{
+            bottom: -11px;
+          }
+
+        }
+
+        dd{
+          padding: 0;
+
+          p{
+            margin-bottom: 36px;
+          }
+
+        }
+
+      }
+
+    }
+
+    &__slider-pagination{
+      right: 18px;
+      bottom: 122px;
+      left: auto;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .recipe-books-promo {
+
+  }
+}
+@media (min-width: $desktop) {
+  .recipe-books-promo {
+    max-width: 1250px;
+    margin: 0 auto 226px;
+    padding: 0 25px;
+
+    &__slider-pagination{
+
+      span {
+
+        &:hover {
+          background-color: #648347;
+        }
+
+      }
+
+    }
+
+  }
+}

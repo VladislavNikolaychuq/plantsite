@@ -1,0 +1,257 @@
+.book {
+  margin-bottom: 60px;
+  padding-top: 10px;
+
+  &__picture{
+    position: relative;
+    width: calc( 100% - 60px );
+    max-width: 315px;
+    margin: 0 auto 25px;
+
+    img{
+      display: block;
+      width: 100%;
+      box-shadow: -20px 10px 52px 0 rgba(0,0,0,0.2);
+      transition: opacity .3s ease, visibility .3s ease;
+
+      &:nth-child(2){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &.hide{
+        opacity: 0;
+        visibility: hidden;
+      }
+
+    }
+
+  }
+
+  &__info{
+    margin-bottom: 55px;
+    padding: 0 30px;
+
+    h1{
+      position: relative;
+      margin-bottom: 37px;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 56px;
+        border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+        content: '';
+      }
+
+    }
+
+    p{
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__language{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 17px;
+
+    label{
+      margin-bottom: 14px;
+      white-space: nowrap;
+    }
+
+    input{
+      display: none;
+
+      &:checked + span{
+
+        &:before{
+          background-color: #9FB93C;
+          box-shadow: none;
+        }
+
+      }
+
+    }
+
+    span{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &:before{
+        display: block;
+        width: 19px;
+        height: 19px;
+        margin-right: 11px;
+        border-radius: 50%;
+        background-color: #DEDEDE;
+        box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5);
+        box-sizing: border-box;
+        transition: box-shadow .3s ease, background-color .3s ease;
+        content: '';
+      }
+
+    }
+
+  }
+
+  &__download-app{
+    width: 144px;
+    height: 51px;
+
+    svg{
+      height: 51px;
+    }
+
+  }
+
+  &__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 0 -10px;
+
+    .btn{
+      min-width: 270px;
+      margin: 0 23px 15px 0;
+      padding: 0 36px;
+    }
+
+  }
+
+  &__gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+
+    &-item{
+      width: 100%;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      overflow: hidden;
+
+      img{
+        display: block;
+        width: 100%;
+      }
+
+    }
+
+  }
+
+  &__review{
+    display: flex;
+    margin-bottom: 31px;
+    color: #4A4A4A;
+    font-size: 18px;
+    font-weight: 600;
+
+    .stars-rating{
+      margin-right: 21px;
+    }
+
+  }
+
+  &__price{
+    margin-bottom: 22px;
+    color: #4A4A4A;
+    font-size: 48px;
+    line-height: 1;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .book {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .book {
+
+    &__gallery{
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 100%;
+      padding: 0;
+
+      &-item{
+        width: 31.2%;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .book {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 136px;
+    padding: 32px 25px 0;
+
+    &__picture{
+      width: 439px;
+      max-width: none;
+      margin: 0 0 47px;
+    }
+
+    &__info{
+      margin-bottom: 47px;
+      width: calc( 100% - 500px );
+
+      p{
+        width: 90%;
+      }
+
+    }
+
+    &__language{
+      flex-direction: row;
+      margin-left: -3px;
+      padding-top: 2px;
+
+      label{
+        margin-right: 44px;
+      }
+
+    }
+
+    &__footer{
+      margin: 0;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .book {
+    max-width: 1250px;
+    margin: 0 auto 136px;
+
+    &__gallery{
+
+      &-item{
+        transition: box-shadow .3s ease;
+
+        &:hover{
+          box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+        }
+
+      }
+
+    }
+
+  }
+}

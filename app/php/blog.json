@@ -1,0 +1,59 @@
+{
+  "maxPages": 4,
+  "blog": [
+    {
+      "link": "#",
+      "image": "img/blog-hero-back.jpg",
+      "title": "Recipe 1",
+      "content": "This Thanksgiving I wanted to give you a number of healthy recipes that are easy to make and create for yourself and your family. I made the mashed potatoes, cornbread, pumpkin pie balls and vegetable gravy from scratch but I used…",
+      "author": "Hannah",
+      "tag": "Recent News",
+      "date": "2017-11-30"
+    },
+    {
+      "link": "#",
+      "image": "img/blog-hero-back.jpg",
+      "title": "Recipe 1",
+      "content": "This Thanksgiving I wanted to give you a number of healthy recipes that are easy to make and create for yourself and your family. I made the mashed potatoes, cornbread, pumpkin pie balls and vegetable gravy from scratch but I used…",
+      "author": "Hannah",
+      "tag": "Recent News",
+      "date": "2017-11-30"
+    },
+    {
+      "link": "#",
+      "image": "img/blog-hero-back.jpg",
+      "title": "Recipe 1",
+      "content": "This Thanksgiving I wanted to give you a number of healthy recipes that are easy to make and create for yourself and your family. I made the mashed potatoes, cornbread, pumpkin pie balls and vegetable gravy from scratch but I used…",
+      "author": "Hannah",
+      "tag": "Recent News",
+      "date": "2017-11-30"
+    },
+    {
+      "link": "#",
+      "image": "img/blog-hero-back.jpg",
+      "title": "Recipe 1",
+      "content": "This Thanksgiving I wanted to give you a number of healthy recipes that are easy to make and create for yourself and your family. I made the mashed potatoes, cornbread, pumpkin pie balls and vegetable gravy from scratch but I used…",
+      "author": "Hannah",
+      "tag": "Recent News",
+      "date": "2017-11-30"
+    },
+    {
+      "link": "#",
+      "image": "img/blog-hero-back.jpg",
+      "title": "Recipe 1",
+      "content": "This Thanksgiving I wanted to give you a number of healthy recipes that are easy to make and create for yourself and your family. I made the mashed potatoes, cornbread, pumpkin pie balls and vegetable gravy from scratch but I used…",
+      "author": "Hannah",
+      "tag": "Recent News",
+      "date": "2017-11-30"
+    },
+    {
+      "link": "#",
+      "image": "img/blog-hero-back.jpg",
+      "title": "Recipe 1",
+      "content": "This Thanksgiving I wanted to give you a number of healthy recipes that are easy to make and create for yourself and your family. I made the mashed potatoes, cornbread, pumpkin pie balls and vegetable gravy from scratch but I used…",
+      "author": "Hannah",
+      "tag": "Recent News",
+      "date": "2017-11-30"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+.book-content {
+  position: relative;
+  margin-bottom: 100px;
+  padding: 147px 10px 0;
+
+  &__wrap{
+    position: relative;
+    padding: 30px 20px 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+
+    h2{
+      margin-bottom: 68px;
+      color: #4A4A4A;
+      @include lato;
+      font-size: 48px;
+      line-height: 57px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .btn{
+      display: inline-flex;
+      padding: 0 36px;
+    }
+
+  }
+
+  &__advantages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 95%;
+    margin: 0 auto;
+
+    li{
+      width: 44%;
+      max-width: 223px;
+      margin-bottom: 41px;
+      color: #717171;
+      @include roboto-medium;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: .5px;
+      text-align: left;
+    }
+
+    &-icon{
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 30px;
+
+      img, svg{
+        display: block;
+        max-width: 58px;
+        max-height: 58px;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+
+        g{
+          fill: #000;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 150px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    overflow: hidden;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  &__languages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 70px -20px;
+    color: rgba(113,113,113,.7);
+    @include roboto-medium;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: .5px;
+
+    svg{
+      width: 28px;
+      height: 19px;
+      margin-left: 19px;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .book-content {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .book-content {
+    min-height: auto;
+    margin-bottom: 150px;
+
+    &__wrap{
+      padding: 70px 95px 70px;
+    }
+
+    &__advantages{
+      width: 100%;
+      margin-bottom: 14px;
+
+      li{
+        margin-bottom: 66px;
+        line-height: 17px;
+      }
+
+    }
+
+    &__languages{
+      justify-content: flex-start;
+      margin: 0 0 29px 0;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .book-content {
+    padding-top: 250px;
+
+    &__wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .book-content {
+
+    &__back{
+      max-width: 1200px;
+    }
+
+  }
+}
+

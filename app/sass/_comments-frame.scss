@@ -1,0 +1,24 @@
+.comments-frame {
+  margin: 0 auto 100px;
+  padding: 0 10px;
+}
+@media (min-width: $phone-landscape) {
+  .comments-frame {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .comments-frame {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .comments-frame {
+    max-width: 1020px;
+  }
+}
+@media (min-width: $desktop) {
+  .comments-frame {
+
+  }
+}

@@ -1,0 +1,27 @@
+.woocommerce{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  > * {
+    width: 100%;
+  }
+
+  .woocommerce-error:first-child{
+    margin-bottom: 30px;
+    order: 2;
+
+    + .hero-account{
+      order: 1;
+      margin-bottom: 10px;
+
+      + .account-form{
+        order: 3;
+      }
+
+    }
+
+  }
+
+}

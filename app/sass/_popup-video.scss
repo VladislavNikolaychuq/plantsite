@@ -1,0 +1,42 @@
+.popup_join-us-video {
+  width: 100%;
+  max-width: 1000px;
+
+  iframe{
+    width: 100%;
+    max-height: 92vh;
+    margin: 0 auto;
+    transition: height .3s ease, opacity .3s ease;
+  }
+
+  .preload__book{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .popup_join-us-video {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .popup_join-us-video {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .popup_join-us-video {
+
+  }
+}
+@media (min-width: $desktop) {
+  .popup_join-us-video {
+
+  }
+}

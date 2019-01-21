@@ -1,0 +1,66 @@
+.loss-story {
+  margin-bottom: 70px;
+  padding: 0 10px;
+  text-align: center;
+
+  &__video{
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+
+    iframe{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  h2{
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+
+  &__text{
+    margin-bottom: 30px;
+    color: #878787;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .loss-story {
+
+    &__text{
+      max-width: 605px;
+      margin: 0 auto 30px;
+    }
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .loss-story {
+    margin-bottom: 150px;
+
+    h2{
+      max-width: 510px;
+      margin-bottom: 67px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .loss-story {
+
+    &__video{
+      max-width: 1000px;
+      margin: 0 auto 30px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .loss-story {
+
+  }
+}
+

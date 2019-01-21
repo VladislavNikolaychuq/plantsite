@@ -1,0 +1,180 @@
+.benefits-planner {
+  position: relative;
+  margin-bottom: 100px;
+  padding: 147px 10px 0;
+
+  &__wrap{
+    position: relative;
+    padding: 30px 20px 50px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+    z-index: 1;
+    text-align: left;
+    overflow: hidden;
+
+    h2{
+      margin-bottom: 68px;
+      color: #4A4A4A;
+      @include lato;
+      font-size: 48px;
+      line-height: 57px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+  }
+
+  &__advantages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 95%;
+    margin: 0 auto;
+
+    li{
+      width: 44%;
+      max-width: 223px;
+      margin-bottom: 50px;
+      color: #717171;
+      @include roboto-medium;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: .5px;
+      text-align: left;
+
+      p:first-of-type{
+        margin-bottom: 18px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+    }
+
+    &-icon{
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 30px;
+
+      img, svg{
+        display: block;
+        max-width: 58px;
+        max-height: 58px;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+
+        g{
+          fill: #000;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 150px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    overflow: hidden;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  &__download{
+    display: block;
+    max-width: 187px;
+    margin: 0 auto;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .benefits-planner {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .benefits-planner {
+    min-height: auto;
+    margin-bottom: 150px;
+
+    &__wrap{
+      padding: 70px 95px 70px;
+
+      h2{
+        margin-bottom: 38px;
+        text-align: center;
+      }
+
+    }
+
+    &__advantages{
+      width: 100%;
+      margin-bottom: 20px;
+
+      li{
+        margin-bottom: 56px;
+        line-height: 17px;
+      }
+
+    }
+
+    &__languages{
+      justify-content: flex-start;
+      margin: 0 0 29px 0;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .benefits-planner {
+    padding-top: 250px;
+
+    &__wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .benefits-planner {
+
+    &__back{
+      max-width: 1200px;
+    }
+
+    &__download {
+
+      svg {
+        transform: translateZ(0);
+        transition: transform .3s ease;
+
+        * {
+          transform: translateZ(0);
+        }
+
+      }
+
+      &:hover svg {
+        transform: scale(1.05) translateZ(0);
+      }
+
+    }
+
+  }
+}
+

@@ -1,0 +1,164 @@
+.books-bundle {
+  position: relative;
+  margin-bottom: 100px;
+  padding: 147px 10px 0;
+
+  &__wrap{
+    position: relative;
+    padding: 30px 20px 35px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 10px 52px 0 rgba(0,0,0,.21);
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+
+    h2{
+      margin-bottom: 52px;
+    }
+
+  }
+
+  &__text{
+    max-width: 92%;
+    margin: 0 auto 55px;
+  }
+
+  &__picture{
+    margin-bottom: 19px;
+
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      margin: 0 auto;
+    }
+
+    li{
+      width: 50%;
+      margin-bottom: 21px;
+
+      > div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        max-width: 156px;
+        margin: 0 auto;
+        box-shadow: -20px -10px 52px 0 rgba(0,0,0,0.2);
+        overflow: hidden;
+      }
+
+    }
+
+    img{
+      width: 100%;
+      box-shadow: -20px -10px 52px 0 rgba(0,0,0,.2);
+    }
+
+  }
+
+  &__discount{
+    margin-bottom: 30px;
+  }
+
+  &__back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 150px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    overflow: hidden;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  .btn{
+    display: inline-flex;
+    text-transform: uppercase;
+    padding: 0 28px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .books-bundle {
+    min-height: auto;
+    margin-bottom: 161px;
+
+    &__wrap{
+      padding-top: 70px;
+    }
+
+    &__picture{
+
+      li{
+        width: 33.333%;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .books-bundle {
+    margin-bottom: 150px;
+
+    h2{
+      max-width: 750px;
+      margin: 0 auto 60px;
+    }
+
+    &__picture {
+      margin-bottom: 25px;
+
+      ul{
+        max-width: 763px;
+      }
+
+      li{
+        margin-bottom: 38px;
+
+        > div{
+          max-width: 232px;
+        }
+
+      }
+
+    }
+
+    &__wrap{
+      padding-bottom: 70px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .books-bundle {
+    padding-top: 250px;
+
+    &__wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .books-bundle {
+
+    &__back{
+      max-width: 1200px;
+    }
+
+  }
+}

@@ -1,0 +1,157 @@
+.join-us {
+  margin-bottom: 101px;
+  text-align: center;
+
+  &__title{
+    margin-bottom: 30px;
+    text-align: center;
+
+    h2{
+      max-width: 85%;
+      margin: 0 auto 13px;
+      color: #4A4A4A;
+      @include lato;
+      font-size: 48px;
+      line-height: 57px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    dd{
+      color: #4A4A4A;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: bold;
+    }
+
+  }
+
+  &__swiper{
+    margin-bottom: 28px;
+  }
+
+  &__slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 315px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+
+    img{
+      display: block;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    &:before{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 27.54px;
+      height: 27.54px;
+      border-radius: 50%;
+      background: url("../img/icon-play.svg") no-repeat center;
+      background-size: cover;
+      box-shadow: 0 2px 31px 0 rgba(0,0,0,0.5);
+      transform: translate(-50%, -50%);
+      opacity: .8;
+      content: '';
+    }
+
+  }
+
+  .btn {
+    display: inline-flex;
+    padding: 0 30px;
+    @include roboto-medium;
+    text-transform: uppercase;
+
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    img, svg{
+      width: 22px;
+      margin-right: 16px;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .join-us {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .join-us {
+    margin-bottom: 164px;
+
+    &__title{
+      margin-bottom: 70px;
+
+      h2{
+        margin-bottom: 15px;
+      }
+
+    }
+
+    &__slide{
+      width: 549px;
+      height: 304px;
+      opacity: 0;
+      transition: opacity .3s ease;
+
+      &.swiper-slide-active{
+        opacity: 1;
+      }
+
+      &.swiper-slide-prev,
+      &.swiper-slide-next{
+        opacity: .3;
+      }
+
+      &:before{
+        width: 48px;
+        height: 48px;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .join-us {
+
+  }
+}
+@media (min-width: $desktop) {
+  .join-us {
+
+    &__slide{
+
+      &:before{
+        transition: transform .3s ease, opacity .3s ease;
+        transform-origin: 0 0;
+      }
+
+      &:hover{
+
+        &:before{
+          opacity: 1;
+          transform: scale(1.1) translate(-50%, -50%);
+        }
+
+      }
+
+    }
+
+  }
+}
+

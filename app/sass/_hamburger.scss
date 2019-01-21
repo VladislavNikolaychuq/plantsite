@@ -1,0 +1,76 @@
+.hamburger {
+  display: block;
+  width: 33px;
+  height: 20px;
+
+  span{
+    position: absolute;
+    top: 50%;
+    width: 33px;
+    height: 1px;
+    background-color: #000;
+    transform: translateY(-50%) translateZ(0);
+
+    &:before,
+    &:after{
+      position: inherit;
+      width: 100%;
+      height: inherit;
+      background-color: inherit;
+      content: '';
+    }
+
+    &:before{
+      top: -8px;
+      transition: top .3s ease .3s, transform .3s cubic-bezier(.165,.84,.44,1);
+    }
+
+    &:after{
+      bottom: -8px;
+      transition: bottom .3s ease .3s, transform .3s cubic-bezier(.165,.84,.44,1);
+    }
+
+  }
+
+  &.is-active{
+
+    span{
+
+      &:before{
+        top: 0;
+        transition: top .2s ease,transform .2s cubic-bezier(.895,.03,.685,.22) .2s;
+        transform: translate3d(-8px,-8px,0) rotate(-45deg) scaleX(.7) translateZ(0);
+      }
+
+      &:after{
+        bottom: 0;
+        transition: bottom .2s ease,transform .2s cubic-bezier(.895,.03,.685,.22) .2s;
+        transform: translate3d(-8px,8px,0) rotate(45deg) scaleX(.7) translateZ(0);
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .hamburger {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .hamburger {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hamburger {
+
+  }
+}
+@media (min-width: $desktop) {
+  .hamburger {
+    display: none;
+  }
+}
+

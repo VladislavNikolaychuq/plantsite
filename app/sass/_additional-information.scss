@@ -1,0 +1,154 @@
+.additional-information {
+  margin-bottom: 100px;
+
+  &__reviews{
+    width: calc( 100% - 40px );
+    max-width: 840px;
+    margin: 0 auto;
+
+    &-item{
+
+      > div{
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 10px 42px 0 rgba(0,0,0,.12);
+        overflow: hidden;
+      }
+
+    }
+
+    &-pic{
+
+      img{
+        display: block;
+        width: 100%;
+      }
+
+    }
+
+    &-head{
+      position: relative;
+      margin-bottom: 16px;
+
+      p:first-of-type{
+        margin-bottom: 5px;
+        color: #4A4A4A;
+      }
+
+      img{
+        display: block;
+        margin: 0 0 15px;
+        max-width: 73px;
+      }
+
+    }
+
+    &-content{
+      padding: 32px 40px;
+      color: #878787;
+      font-size: 18px;
+      line-height: 30px;
+
+      a{
+        color: #9FB93C;
+      }
+
+    }
+
+    &-link{
+      margin-top: 15px;
+    }
+
+  }
+
+  &__pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    z-index: 1;
+  }
+
+  .faq-wrap{
+    margin-bottom: 0;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .additional-information {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .additional-information {
+
+    &__reviews{
+      overflow: hidden;
+
+      &-item{
+
+        > div{
+          display: flex;
+          justify-content: stretch;
+          align-items: stretch;
+          width: calc( 100% - 40px );
+        }
+      }
+
+      &-head{
+
+        img{
+          position: absolute;
+          top: 9px;
+          right: 0;
+          margin: 0;
+        }
+
+      }
+
+      &-pic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        min-height: 270px;
+        overflow: hidden;
+      }
+
+      &-content{
+        width: calc( 100% - 270px );
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .additional-information {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+}
+@media (min-width: $desktop) {
+  .additional-information {
+
+    &__reviews{
+
+      &-content{
+
+        a{
+          transition: color .3s ease;
+
+          &:hover{
+            color: #648347;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}

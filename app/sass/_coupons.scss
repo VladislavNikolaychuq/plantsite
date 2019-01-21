@@ -1,0 +1,101 @@
+.coupons {
+  position: relative;
+  width: 100%;
+  max-width: 426px;
+  height: 51px;
+  margin: 0 auto 30px;
+
+  &__form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+
+    input{
+      width: calc( 100% - 148px );
+      height: inherit;
+      border: 1px solid #DEDEDE;
+      border-radius: 4px;
+      text-align: center;
+      transition: border-color .3s ease, padding-bottom .3s ease;
+
+      &.is-not-valid,
+      &.is-not-touched{
+        border-color: #F16462;
+      }
+
+    }
+
+    button{
+      display: inline-flex;
+      width: 133px;
+      padding: 0 30px;
+      @include roboto-medium;
+      text-transform: uppercase;
+    }
+
+    & + .coupons__message{
+      opacity: 0;
+      visibility: hidden;
+
+      &.is-show{
+        opacity: 1;
+        visibility: visible;
+      }
+
+    }
+
+  }
+
+  &__message{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-color: #F8F8F8;
+    transition: opacity .3s ease, visibility .3s ease;
+
+    .amount{
+      margin-left: 4px;
+      font-weight: bold;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .coupons {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .coupons {
+    margin: 0;
+
+    &__form{
+
+      input{
+        padding: 0 20px;
+        text-align: left;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .coupons {
+
+  }
+}
+@media (min-width: $desktop) {
+  .coupons {
+
+  }
+}
+

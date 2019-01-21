@@ -1,0 +1,55 @@
+.hero-account {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 0 10px;
+
+  &__wrap {
+    padding: 39px 25px 0;
+    text-align: center;
+    overflow: hidden;
+
+    h1, h2{
+      position: relative;
+      margin-bottom: 33px;
+
+      &:after {
+        position: absolute;
+        bottom: -15px;
+        left: calc( 50% - 28px);
+        width: 56px;
+        border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+        content: '';
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .hero-account {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .hero-account {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero-account {
+
+    &__wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 25px 0;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .hero-account {
+
+  }
+}
+

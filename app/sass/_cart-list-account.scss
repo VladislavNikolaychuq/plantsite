@@ -1,0 +1,36 @@
+.cart-list {
+
+  &__empty{
+    top: 29px;
+    font-size: 25px;
+    line-height: 32px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .cart-list {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .cart-list {
+
+    &__empty {
+      top: 59px;
+      font-size: 30px;
+      line-height: 57px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .cart-list {
+
+  }
+}
+@media (min-width: $desktop) {
+  .cart-list {
+
+  }
+}
+

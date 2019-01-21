@@ -1,0 +1,78 @@
+.orders {
+  margin-bottom: 100px;
+  overflow: hidden;
+
+  &__wrap{
+    min-width: 673px;
+    padding: 0 10px;
+
+    & > div{
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+  }
+
+  table{
+    width: 100%;
+    min-width: 653px;
+
+    td{
+      padding: 0 20px;
+      text-align: center;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+  }
+
+  thead{
+
+    td{
+      height: 78px;
+      color: #fff;
+      font-size: 20px;
+      background-color: #30441E;
+    }
+
+  }
+
+  tbody{
+
+    td{
+      height: 92px;
+      color: #4A4A4A;
+      background-color: #F8F8F8;
+      border-bottom: 1px solid rgba(48,68,30,.05);
+
+      &:first-child{
+        font-weight: 600;
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .orders {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .orders {
+    margin: 0 auto 150px;
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .orders {
+
+  }
+}
+@media (min-width: $desktop) {
+  .orders {
+    max-width: 1220px;
+
+  }
+}
+

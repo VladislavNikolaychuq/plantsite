@@ -1,0 +1,62 @@
+.logo {
+  display: block;
+  width: 250px;
+  margin: 0 auto 30px;
+
+  img, svg{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &_small{
+    display: none;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .logo {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .logo {
+    width: 400px;
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .logo {
+
+  }
+}
+@media (min-width: $desktop) {
+  .logo {
+
+    &_small{
+      display: block;
+      position: relative;
+      top: -4px;
+      width: 0;
+      height: 30px;
+      opacity: 0;
+      transition: width .3s ease, margin-right .3s ease, opacity .3s ease;
+
+      svg{
+        width: 100%;
+        height: inherit;
+      }
+
+      g{
+        stroke: #898989;
+        transition: stroke .3s ease;
+      }
+
+    }
+
+  }
+  a.logo_small:hover g{
+    stroke: #648347;
+  }
+}
+

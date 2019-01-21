@@ -1,0 +1,9 @@
+.idea/
+node_modules/
+dist/wp-config.php
+dist/.htaccess
+dist/nginx.conf
+dist/wp-content/uploads/wc-logs
+wp-config.php
+.htaccess
+nginx.conf

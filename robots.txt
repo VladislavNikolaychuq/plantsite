@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow: /app
+Disallow: /cgi-bin
+Disallow: dist/wp-login.php
+Disallow: dist/wp-admin/
+Disallow: dist/wp-includes/
+Disallow: dist/wp-content/
+Disallow: dist/wp-content/plugins/
+Disallow: dist/wp-content/themes/
+Disallow: dist/?author=*
+Disallow: axadon-lp.sql
+Disallow: axadon-lp_prod_09-08.sql
+Disallow: gulpfile.js
+Disallow: package.json
+Disallow: package-lock.json
+Allow: /

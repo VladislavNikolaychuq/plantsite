@@ -1,0 +1,49 @@
+.account-delete {
+  width: 94%;
+  margin: 0 auto;
+  padding: 0 30px;
+  color: #878787;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+
+  p{
+    width: 94%;
+    margin: 0 auto 34px;
+  }
+
+  .btn{
+    max-width: 250px;
+    margin: 0 auto;
+    @include roboto-medium;
+    font-size: 14px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .account-delete {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .account-delete {
+    max-width: 945px;
+
+    p{
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .account-delete {
+
+  }
+}
+@media (min-width: $desktop) {
+  .account-delete {
+
+  }
+}
+

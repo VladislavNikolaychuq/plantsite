@@ -1,0 +1,89 @@
+.ingredients {
+  position: relative;
+  margin-bottom: 52px;
+  padding: 0 0 30px 20px;
+
+  &:after {
+    position: absolute;
+    bottom: -15px;
+    left: 25px;
+    width: 56px;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+    content: '';
+  }
+
+  &:last-of-type{
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    &:after{
+      display: none;
+    }
+
+  }
+
+  dt{
+    width: 55%;
+    margin-bottom: 30px;
+    color: #878787;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  dd{
+    width: 96%;
+    padding-left: 8px;
+    color: #898989;
+    @include roboto-regular;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: .5px;
+  }
+
+  li{
+    position: relative;
+    margin-bottom: 11px;
+    padding-left: 26px;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #9FB93C;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .ingredients {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .ingredients {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .ingredients {
+    margin-bottom: 52px;
+    padding: 0 0 11px 0;
+
+    dt{
+      width: 100%;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .ingredients {
+
+  }
+}
+

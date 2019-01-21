@@ -1,0 +1,125 @@
+.tabs {
+  margin-bottom: 90px;
+
+  &__items-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    white-space: nowrap;
+  }
+
+  &__items-scroll{
+
+    &.ps{
+      overflow: hidden;
+    }
+
+  }
+
+  &__item{
+    display: inline-block;
+    position: relative;
+    margin-left: 19px;
+    padding-left: 14px;
+    color: #4A4A4A;
+    transition: padding-left .3s ease;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 0;
+      height: 20px;
+      background-color: #9FB93C;
+      transition: width .3s ease;
+    }
+
+    &:last-of-type{
+      margin-right: 19px;
+    }
+
+    &.is-active{
+      pointer-events: none;
+
+      &:before{
+        width: 4px;
+      }
+
+    }
+
+  }
+
+  &__wrap {
+    transition: height .3s ease;
+    position: relative;
+  }
+
+  &__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+
+    &.is-show{
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .tabs {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .tabs {
+    margin-bottom: 165px;
+
+    &__items-wrap{
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    &__item{
+      margin-left: 85px;
+
+      &:first-child{
+        margin-left: 17px;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .tabs {
+    max-width: 1250px;
+    margin: 0 auto 165px;
+
+  }
+}
+@media (min-width: $desktop) {
+  .tabs {
+
+    &__item{
+      transition: color .3s ease, padding-left .3s ease;
+      cursor: pointer;
+
+      &:hover{
+        color: #9FB93C;
+      }
+
+    }
+
+  }
+}
+

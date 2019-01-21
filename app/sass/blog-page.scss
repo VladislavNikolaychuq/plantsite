@@ -1,0 +1,30 @@
+@import "main";
+
+@import "blog";
+@import "app-promo";
+@import "book-content";
+@import "blog-thumbnail";
+@import "blog-article";
+@import "comments-frame";
+@import "about-author";
+
+.site__aside{
+  display: none;
+}
+
+@media (min-width: $tablet-landscape) {
+  .site__wrap{
+    max-width: 1220px;
+    margin-bottom: 160px;
+  }
+  .site__content-wrap {
+    width: calc( 100% - 425px );
+  }
+  .site__aside{
+    display: block;
+    width: 375px;
+    margin-bottom: 0;
+    padding-top: 126px;
+  }
+
+}

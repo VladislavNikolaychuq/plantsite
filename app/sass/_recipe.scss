@@ -1,0 +1,35 @@
+.recipe {
+  padding-left: 20px;
+
+  h2{
+    margin-bottom: 28px;
+    text-transform: none;
+  }
+
+  li{
+    width: 93%;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .recipe {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .recipe {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .recipe {
+    padding-left: 0;
+
+  }
+}
+@media (min-width: $desktop) {
+  .recipe {
+
+  }
+}
+

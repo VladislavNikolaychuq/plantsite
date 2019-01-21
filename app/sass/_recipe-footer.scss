@@ -1,0 +1,126 @@
+.recipe-footer {
+  position: relative;
+  text-align: center;
+  padding: 19px 10px 90px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 56px;
+    transform: translateX(-50%);
+    border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+    content: '';
+  }
+
+  &__title{
+    margin-bottom: 25px;
+    color: #4A4A4A;
+    @include lato;
+    font-size: 48px;
+    letter-spacing: 1px;
+    line-height: 57px;
+  }
+
+  &__print{
+    display: inline-block;
+    width: 195px;
+    margin-bottom: 30px;
+    color: #9FB93C;
+    font-size: 18px;
+    line-height: 30px;
+
+    svg{
+      width: 54px;
+      height: 53px;
+      margin-bottom: 3px;
+
+      g{
+        stroke: #878787;
+      }
+
+    }
+
+    p{
+      white-space: pre-line;
+    }
+
+  }
+
+  &__text{
+    max-width: 675px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #717171;
+    @include roboto-medium;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: .5px;
+
+    p{
+      margin-bottom: 19px;
+    }
+
+    a{
+      color: #9FB93C;;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .recipe-footer {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .recipe-footer {
+    margin-bottom: 120px;
+
+    &__print{
+      margin-bottom: 70px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .recipe-footer {
+  }
+}
+@media (min-width: $desktop) {
+  .recipe-footer {
+
+    &__text{
+
+      a{
+        transition: color .3s ease;
+
+        &:hover{
+          color: #648347;
+        }
+
+      }
+
+    }
+
+    &__print{
+      transition: color .3s ease;
+
+      svg g{
+        transition: stroke .3s ease;
+      }
+
+      &:hover{
+        color: #648347;
+
+        svg g{
+          stroke: #648347;
+        }
+
+      }
+
+    }
+
+  }
+}
+

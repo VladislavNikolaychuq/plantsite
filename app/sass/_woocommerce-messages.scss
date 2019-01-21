@@ -1,0 +1,42 @@
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message{
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+
+  li{
+    padding: 0!important;
+
+    &:before{
+      display: none;
+    }
+
+    strong{
+      color: inherit;
+    }
+
+    a{
+      display: block;
+      text-decoration: underline;
+    }
+
+  }
+
+  a{
+    display: block;
+    text-decoration: underline;
+    color: #9FB93C;
+  }
+
+}
+
+.woocommerce-info,
+.woocommerce-error{
+  color: #F16462;
+}
+
+.woocommerce-message{
+  color: #9FB93C;
+}

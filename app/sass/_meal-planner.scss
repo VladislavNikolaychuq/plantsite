@@ -1,0 +1,102 @@
+.meal-planner {
+  margin-bottom: 100px;
+  padding: 0 10px;
+  counter-reset: list 0;
+
+  &__title{
+    width: 90%;
+    margin: 0 auto 50px;
+  }
+
+  &__picture{
+    max-width: 355px;
+    margin: 0 auto 24px;
+    padding: 12px 25px;
+    background: url('../img/meal-planner-ipad.jpg') no-repeat center;
+    background-size: cover;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  &__item{
+    margin-bottom: 70px;
+  }
+
+  &__content{
+    max-width: 88%;
+    margin: 0 auto;
+    text-align: center;
+
+    &:before{
+      display: block;
+      margin-bottom: 17px;
+      color: rgba(74,74,74,.8);
+      @include lato;
+      font-size: 48px;
+      line-height: 52px;
+      letter-spacing: 3px;
+      counter-increment: list;
+      content: 'Step' counter(list);
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .meal-planner {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .meal-planner {
+
+    &__title{
+      width: 100%;
+      margin: 0 auto 69px;
+      text-align: center;
+    }
+
+    &__item{
+      max-width: 417px;
+      margin: 0 auto 79px;
+    }
+
+    &__picture{
+      width: 417px;
+      margin-bottom: 21px;
+    }
+
+    &__content{
+      max-width: 91%;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .meal-planner {
+    max-width: 1020px;
+    margin: 0 auto 77px;
+
+    &__wrap{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__item{
+      width: 48%;
+      margin: 0 0 79px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .meal-planner {
+
+  }
+}

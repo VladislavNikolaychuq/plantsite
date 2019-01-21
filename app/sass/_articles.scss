@@ -1,0 +1,159 @@
+.article {
+  color: #878787;
+  font-size: 18px;
+  line-height: 30px;
+
+  h1, h2{
+    color: #4A4A4A;
+    @include lato;
+    font-size: 48px;
+    line-height: 57px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    word-break: break-word;
+  }
+
+  > ol{
+    counter-reset: list 0;
+
+    li{
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 58px;
+
+      &:before{
+        position: absolute;
+        left: 0;
+        top: 1px;
+        color: #4A4A4A;
+        @include lato;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: 1px;
+        counter-increment: list;
+        content: counter(list);
+      }
+
+    }
+
+  }
+
+  > ul{
+
+    li{
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 50px;
+
+      &:before{
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background: #9FB93C;
+        content: '';
+      }
+
+    }
+
+  }
+
+  p > a,
+  li > a{
+    color: #9FB93C;
+  }
+
+  li > strong,
+  p > strong{
+    color: #4a4a4a;
+  }
+
+  p > svg{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  blockquote{
+    position: relative;
+    margin: 0 0 30px 40px;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: -39px;
+      bottom: 0;
+      width: 5px;
+      background-color: #9FB93C;
+    }
+
+  }
+
+  .alignleft,
+  .alignright{
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .alignleft{
+    float: left;
+    margin-right: 15px;
+  }
+
+  .alignright{
+    float: left;
+    margin-left: 15px;
+  }
+
+  .aligncenter{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+
+
+
+}
+@media (min-width: $phone-landscape) {
+  .article {
+
+    h1, h2{
+      word-break: normal;
+    }
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .article {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .article {
+
+  }
+}
+@media (min-width: $desktop) {
+  .article {
+
+    li > a,
+    p > a{
+      transition: color .3s ease;
+
+      &:hover{
+        color: #648347;
+      }
+
+    }
+
+  }
+}
+

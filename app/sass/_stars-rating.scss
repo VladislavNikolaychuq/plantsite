@@ -1,0 +1,47 @@
+.stars-rating {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  span{
+    width: 25px;
+    height: 25px;
+    margin-left: 6px;
+    background: url(../img/icon-star-empty.svg) no-repeat 0 0;
+    background-size: cover;
+    overflow: hidden;
+    text-indent: -9999px;
+    transition: background-image .3s ease;
+
+    &.active{
+      background-image: url("../img/icon-star-full.svg");
+    }
+
+    &:first-child{
+      margin-left: 0;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .stars-rating {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .stars-rating {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .stars-rating {
+
+  }
+}
+@media (min-width: $desktop) {
+  .stars-rating {
+
+  }
+}
+

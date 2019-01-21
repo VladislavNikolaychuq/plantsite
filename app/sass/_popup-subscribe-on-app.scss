@@ -1,0 +1,24 @@
+.popup_subscribe_on_app_news {
+  width: 100%;
+  max-width: 1000px;
+  padding: 69px 20px 55px;
+  border-radius: 8px;
+  background-color: #F3EEDB;
+
+  .btn{
+    max-width: 260px;
+    margin: 0 auto;
+    @include roboto-regular;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+}
+@media (min-width: $tablet-portrait) {
+}
+@media (min-width: $tablet-landscape) {
+}
+@media (min-width: $desktop) {
+}

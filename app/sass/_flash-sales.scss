@@ -1,0 +1,165 @@
+.flash-sales {
+  margin: 0 auto 71px;
+  max-width: 1041px;
+  padding: 0 10px;
+  text-align: center;
+
+  &__text{
+    width: 100%;
+    margin-bottom: 39px;
+
+    h1, h2{
+      position: relative;
+      margin-bottom: 33px;
+
+      &:after {
+        position: absolute;
+        bottom: -15px;
+        left: calc( 50% - 28px);
+        width: 56px;
+        border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+        content: '';
+      }
+
+    }
+
+    p{
+      margin-bottom: 30px;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+  &__timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 38px;
+    color: #F16462;
+    font-size: 21px;
+    font-weight: bold;
+
+    > span{
+      position: relative;
+      top: -3px;
+      margin: 0 3px;
+      animation: clipping 2s infinite linear both;
+
+      &:first-child{
+        display: none;
+      }
+
+    }
+
+  }
+
+  &__clock-face{
+    position: relative;
+
+    > div{
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+
+      span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 68px;
+        margin: 0 2px;
+        border: 2px solid #E9E9E9;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+    }
+
+    > span{
+      position: absolute;
+      top: calc( 100% + 9px );
+      left: 0;
+      width: 100%;
+      color: #4A4A4A;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+  }
+
+  &.is-hide{
+    display: none;
+  }
+
+}
+.hero-article + .flash-sales {
+
+}
+@media (min-width: $phone-landscape) {
+  .flash-sales {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .flash-sales {
+
+    &__timer{
+      font-size: 48px;
+
+      > span {
+        margin: 0 6px;
+      }
+
+    }
+
+    &__clock-face{
+
+      > div{
+
+        span{
+          width: 71px;
+          height: 120px;
+          margin: 0 8px;
+        }
+
+      }
+
+      > span{
+        font-size: 18px;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .flash-sales {
+    margin: 0 auto 71px;
+
+    &__clock-face{
+
+      > div{
+
+        span{
+          width: 104px;
+        }
+
+      }
+
+    }
+
+  }
+  .hero-article + .flash-sales {
+    margin-top: -81px;
+  }
+}
+@media (min-width: $desktop) {
+  .flash-sales {
+
+  }
+}

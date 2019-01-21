@@ -1,0 +1,94 @@
+.basket {
+  transform: translateZ(0);
+  transition: width .3s ease;
+
+  svg{
+    display: block;
+    width: 40px;
+    height: 33px;
+    transform: translateZ(0);
+
+    g{
+      stroke: #231F20;
+    }
+
+  }
+
+  &__wrap{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  &__amount {
+    display: block;
+    position: relative;
+    top: 9px;
+    max-width: 60px;
+    margin-left: -19px;
+    padding: 4px 7px 3px;
+    border-radius: 8px;
+    color: #fff;
+    @include roboto-medium;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: .5px;
+    background-color: #F16462;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: transform .3s ease, border-radius .3s ease;
+
+    &.is-hide{
+      transform: scale(0) translateZ(0);
+      border-radius: 50%;
+    }
+
+    &.is-growing{
+      transform: scale(1.2) translateZ(0);
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .basket {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .basket {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .basket {
+
+  }
+}
+@media (min-width: $desktop) {
+  .basket {
+
+    svg g{
+      transition: stroke .3s ease;
+    }
+
+    &__amount {
+      transition: background-color .3s ease, transform .3s ease, border-radius .3s ease;
+    }
+
+    &:hover{
+
+      svg g{
+        stroke: #648347;
+      }
+
+      .basket__amount  {
+        background-color: #DE4C4A;
+      }
+
+    }
+
+  }
+}
+

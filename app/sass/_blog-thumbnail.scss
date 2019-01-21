@@ -1,0 +1,39 @@
+.blog-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 437px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+
+  img{
+    display: block;
+    width: 100%;
+  }
+
+
+
+}
+@media (min-width: $phone-landscape) {
+  .blog-thumbnail {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .blog-thumbnail {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .blog-thumbnail {
+
+  }
+}
+@media (min-width: $desktop) {
+  .blog-thumbnail {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+  }
+}
+

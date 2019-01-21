@@ -1,0 +1,233 @@
+.about-me {
+  margin-bottom: 48px;
+  padding-top: 6px;
+
+  &__item{
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+    > img{
+      margin-bottom: 50px;
+    }
+
+    &:nth-child(2){
+      margin-bottom: 92px
+    }
+
+  }
+
+  &__text{
+    padding: 0 30px;
+
+    h2, h3, h4 {
+      margin: 99px 0 50px;
+      text-align: center;
+    }
+
+    > p{
+      margin-bottom: 30px;
+    }
+
+    svg{
+      width: 202px;
+      height: 141px;
+      margin: 0 0 13px -7px;
+    }
+
+    blockquote{
+      margin: 50px 8px 27px -8px;
+      color: #4A4A4A;
+      @include lato;
+      font-size: 48px;
+      line-height: 57px;
+    }
+
+  }
+
+  &__picture{
+    margin: 0 -22px 20px;
+
+    img{
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__video{
+    margin: 0 -20px 66px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+
+    iframe{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .about-me {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .about-me {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .about-me {
+    max-width: 1058px;
+    margin: 0 auto;
+
+    &__item{
+      position: relative;
+
+      &:nth-child(1){
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 13px;
+        .about-me__text{
+          width: 48%;
+          margin: 0;
+        }
+        .about-me__picture{
+          width: 807px;
+          margin: -13px -308px 14px 0;
+        }
+      }
+      &:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 47px;
+        .about-me__text{
+          width: 47%;
+          order: 2;
+        }
+        .about-me__picture{
+          margin: -148px 0 14px -248px;
+          width: 800px;
+        }
+      }
+      &:nth-child(3){
+        margin-bottom: 47px;
+        .about-me__text{
+          max-width: 860px;
+          margin: 0 auto;
+
+          blockquote{
+            margin: 0 0 68px 122px;
+            letter-spacing: -.5px;
+          }
+
+        }
+      }
+      &:nth-child(4){
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 70px;
+        .about-me__text{
+          width: 44%;
+          margin: 0;
+          order: 1;
+
+          blockquote{
+            width: 740px;
+            margin-bottom: 68px;
+          }
+
+        }
+        .about-me__picture {
+          position: relative;
+          left: -32px;
+          width: 757px;
+          margin: 0 -165px 69px 0;
+          order: 2;
+        }
+      }
+      &:nth-child(5){
+        margin-bottom: 76px;
+        .about-me__text{
+          max-width: 860px;
+          margin: 0 auto;
+          .about-me__video {
+            max-width: 1000px;
+            width: calc(100% + 200px);
+            margin: 0 -100px 70px;
+          }
+        }
+      }
+
+      > img {
+        margin: 0 -70px 70px;
+        width: calc( 100% + 140px );
+      }
+
+    }
+
+    &__text{
+
+      h2, h3, h4{
+        margin: 0 auto 70px;
+      }
+
+      svg{
+        margin: 0 0 16px 0;
+      }
+
+    }
+
+    &__picture{
+
+      img{
+        max-width: none;
+      }
+
+    }
+
+    &__video{
+      max-width: 1000px;
+      margin: 0 auto 30px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .about-me {
+
+    &__item{
+
+      &:nth-child(3){
+        .about-me__text{
+
+          blockquote{
+            width: 100%;
+          }
+
+        }
+      }
+      &:nth-child(4){
+        .about-me__text{
+
+          blockquote{
+            position: relative;
+            right: calc( 50% - 130px );
+          }
+
+        }
+      }
+
+    }
+
+  }
+}
+

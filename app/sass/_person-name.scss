@@ -1,0 +1,55 @@
+.person-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 51px;
+  width: 168px;
+  margin: 0 auto;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 2px solid #9FB93C;
+  color: #898989;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include roboto-medium;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+
+  span{
+    width: 100%;
+    text-align: center;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .person-name {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .person-name {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .person-name {
+
+  }
+}
+@media (min-width: $desktop) {
+  .person-name {
+    margin: 0;
+    transition: background-color .3s ease, color .3s ease;
+
+    &:hover{
+      color: #fff;
+      background-color: #9FB93C;
+    }
+
+  }
+}
+

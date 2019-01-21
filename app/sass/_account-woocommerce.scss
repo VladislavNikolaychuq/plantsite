@@ -1,0 +1,26 @@
+.woocommerce {
+  margin-bottom: 100px;
+
+}
+@media (min-width: $phone-landscape) {
+  .woocommerce {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .woocommerce {
+    margin-bottom: 160px;
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .woocommerce {
+
+  }
+}
+@media (min-width: $desktop) {
+  .woocommerce {
+
+  }
+}
+

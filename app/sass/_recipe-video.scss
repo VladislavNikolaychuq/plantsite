@@ -1,0 +1,36 @@
+.recipe-video {
+  width: calc( 100% - 20px );
+  margin: 0 auto 70px;
+  border-radius: 8px;
+  box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+  overflow: hidden;
+
+  iframe{
+    display: block;
+    width: 100%;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .recipe-video {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .recipe-video {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .recipe-video {
+    max-width: 1000px;
+    margin: 0 auto 70px;
+
+  }
+}
+@media (min-width: $desktop) {
+  .recipe-video {
+
+  }
+}
+

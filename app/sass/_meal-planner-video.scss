@@ -1,0 +1,63 @@
+.meal-planner-video {
+  margin-bottom: 92px;
+  padding: 0 10px;
+
+  &__title{
+    width: 90%;
+    margin: 0 auto 50px;
+  }
+
+  &__iframe{
+    margin-bottom: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 52px 0 rgba(0,0,0,0.21);
+
+    iframe{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  &__download{
+    display: block;
+    max-width: 187px;
+    margin: 0 auto;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .meal-planner-video {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .meal-planner-video {
+
+    &__title{
+      width: 100%;
+      margin: 0 auto 68px;
+      text-align: center;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .meal-planner-video {
+    max-width: 1020px;
+    margin: 0 auto 142px;
+
+    &__iframe{
+      max-width: 1000px;
+      margin: 0 auto 70px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .meal-planner-video {
+
+  }
+}
+
