@@ -1,0 +1,35 @@
+{
+  "maxPages": 4,
+  "recipes": [
+    {
+      "link": "#",
+      "image": "pic/img-013.jpg",
+      "title": "Recipe 1"
+    },
+    {
+      "link": "#",
+      "image": "pic/img-009.jpg",
+      "title": "Recipe 2"
+    },
+    {
+      "link": "#",
+      "image": "pic/img-010.jpg",
+      "title": "Recipe 3"
+    },
+    {
+      "link": "#",
+      "image": "pic/img-011.jpg",
+      "title": "Recipe 4"
+    },
+    {
+      "link": "#",
+      "image": "pic/img-012.jpg",
+      "title": "Recipe 5"
+    },
+    {
+      "link": "#",
+      "image": "pic/img-008.jpg",
+      "title": "Recipe 6"
+    }
+  ]
+}
