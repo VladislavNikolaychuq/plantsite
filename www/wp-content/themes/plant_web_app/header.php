@@ -50,7 +50,7 @@
     <header class="site__header">
 
         <h1 class="logo">
-            <img src="img/logo.svg" alt="img" />
+            <img src="<?php echo DIRECT; ?>img/logo.svg" alt="img" />
         </h1>
 
         <div class="site__header-wrap">
