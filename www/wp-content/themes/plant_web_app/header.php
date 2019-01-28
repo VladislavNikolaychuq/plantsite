@@ -29,10 +29,6 @@
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="css/preload.css">
-
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/common.css">
     <?php wp_head();?>
 </head>
 <body data-action="php/free-recipes.json">
