@@ -1,5 +1,11 @@
 <?php //Template Name: Page app
 get_header();
+
+$frequently_asked_questions= get_field('frequently_asked_questions');
+$BenefitsPlanner=get_field('benefits_of_the_plant_meal_planner');
+$steps=get_field('steps');
+$Customizable=get_field('customizable_meal_planner');
+$watchthisvideo=get_field('watch_this_video_for_a_more');
 ?>
 <!-- site__content -->
 <div class="site__content">
@@ -13,18 +19,18 @@ get_header();
             <div class="hero-app__content">
 
                 <div class="hero-app__content-picture">
-                    <img src="<?php the_field('image_customizable')?>" alt="img" />
+                    <img src="<?php echo $Customizable['image_customizable']?>" alt="img" />
                 </div>
 
                 <div class="hero-app__content-layout">
 
                     <div class="hero-app__content-text article">
 
-                        <h2><?php the_field('tittle_customizable')?></h2>
+                        <h2><?php echo $Customizable['tittle_customizable']?></h2>
 
-                        <p><?php the_field('description_customizable')?></p>
+                        <p><?php echo $Customizable['description_customizable']?></p>
 
-                        <p><?php the_field('second_description_customizable')?></p>
+                        <p><?php echo $Customizable['second_description_customizable']?></p>
 
                     </div>
 
@@ -94,31 +100,32 @@ get_header();
     <!-- meal-planner -->
     <section class="meal-planner article">
 
+        <?php if (!empty($steps['steps_interactive'])): ;?>
 
-                <h2 class="meal-planner__title"><?php the_field('steps_tittle');?></h2>
+                <h2 class="meal-planner__title"><?= $steps['steps_tittle']; ?></h2>
 
                 <ul class="meal-planner__wrap">
-                    <?php  if( have_rows('steps_interactive') ):
 
+                   <?php foreach ($steps ['steps_interactive'] as $item) {
 
-                    while ( have_rows('steps_interactive') ) : the_row(); ?>
+                    if (count($item) > 0): ;?>
 
                     <li class="meal-planner__item">
 
                         <div class="meal-planner__picture">
-                            <img src="<?php the_sub_field('image_step');?>" alt="img"/>
+                            <img src="<?= $item['image_step'] ;?>" alt="img"/>
                         </div>
 
                         <div class="meal-planner__content">
-                            <p><?php the_sub_field ('step_description');?></p>
+                            <p><?=$item['step_description'] ;?></p>
                         </div>
 
+
                     </li>
+                    <?php endif; ?>
+                   <?php } ?>
+                    <?php endif; ?>
 
-                    <?php endwhile;
-
-                    endif;
-                    ?>
                 </ul>
 
     </section>
@@ -127,10 +134,10 @@ get_header();
     <!-- meal-planner-video -->
     <section class="meal-planner-video article">
 
-        <h2 class="meal-planner-video__title"><?php the_field('tittle_watch_video')?></h2>
+        <h2 class="meal-planner-video__title"><?= $watchthisvideo['tittle_watch_video']?></h2>
 
         <div class="meal-planner-video__iframe">
-            <iframe class="youtube-frame" src="https://www.youtube.com/embed/<?php the_field('video_loss_app')?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="youtube-frame" src="https://www.youtube.com/embed/<?= $watchthisvideo['video_loss_app']?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
         <a class="meal-planner-video__download" href="#" rel="nofollow" target="_blank">
@@ -190,27 +197,30 @@ get_header();
 
         <div class="benefits-planner__wrap">
 
-            <h2><?php the_field('benefits_tittle');?></h2>
+            <?php if (!empty($BenefitsPlanner['benefits'])): ?>
+
+            <h2><?= $BenefitsPlanner['benefits_tittle']; ?></h2>
 
             <ul class="benefits-planner__advantages">
+
                 <?php
 
+                foreach ($BenefitsPlanner ['benefits'] as $item) {
 
-                if( have_rows('benefits') ):
+                if (count($item) > 0): ?>
 
-
-                while ( have_rows('benefits') ) : the_row(); ?>
                 <li>
                     <div class="benefits-planner__advantages-icon">
-                        <img src="<?php the_sub_field('benefits_image');  ?>" alt="img"/>
+                        <img src="<?=$item['benefits_image']  ?>" alt="img"/>
                     </div>
-                    <p><?php the_sub_field('tittle_each_benefits');  ?></p>
-                    <p><?php the_sub_field('benefits_description');  ?></p>
+                    <p><?= $item['tittle_each_benefits'];  ?></p>
+                    <p><?= $item['benefits_description'];?></p>
                 </li>
-                <?php endwhile;
 
-                endif;
-                ?>
+                <?php endif; ?>
+                <?php } ?>
+                <?php endif; ?>
+
             </ul>
 
             <a class="benefits-planner__download" href="#" rel="nofollow" target="_blank">
@@ -279,32 +289,28 @@ get_header();
     <!-- faq-wrap -->
     <div class="faq-wrap">
 
+        <?php if (!empty($frequently_asked_questions['frequently_asked'])): ?>
 
-        <h2 class="faq-wrap__title"><?php the_field('frequently_tittle');?></h2>
+            <h2 class="faq-wrap__title"><?= $frequently_asked_questions ['frequently_tittles']; ?></h2>
 
-        <!-- faq-wrap__item -->
-        <?php
-        if( have_rows('frequently_asked') ):
+            <?php
 
+            foreach ($frequently_asked_questions ['frequently_asked'] as $item) {
 
-        while ( have_rows('frequently_asked') ) : the_row(); ?>
-        <dl class="faq-wrap__item">
+                if (count($item) > 0): ?>
 
-            <dt><?php the_sub_field('ask');  ?></dt>
-            <dd>
-                <p><?php the_sub_field('answer');  ?></p>
-            </dd>
+                    <dl class="faq-wrap__item">
+                        <dt><?= $item['ask']; ?></dt>
+                        <dd>
+                            <p><?= $item['answer']; ?></p>
+                        </dd>
+                    </dl>
 
-        </dl>
-        <?php endwhile;
-
-        endif;
-        ?>
-        <!-- /faq-wrap__item -->
-
+                <?php endif; ?>
+            <?php } ?>
+        <?php endif; ?>
 
     </div>
-    <!-- /faq-wrap -->
 
     <!-- join-us -->
     <?php get_template_part ('components/content','join_global');?>
