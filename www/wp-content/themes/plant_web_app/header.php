@@ -45,30 +45,74 @@
     <!-- site__header -->
     <header class="site__header">
 
-        <h1 class="logo">
-            <img src="<?php echo DIRECT; ?>img/logo.svg" alt="img" />
-        </h1>
+
+
+
+        <?php if(is_front_page()){ ?>
+            <h1 class="logo">
+                <img src="<?php echo DIRECT; ?>img/logo.svg" alt="img" />
+            </h1>
+        <?php } else { ?>
+            <a href="<?php echo get_permalink(2)?>" class="logo">
+                <img src="<?php echo DIRECT;?>img/logo.svg" alt="img" />
+            </a>
+        <?php } ?>
+
+
 
         <div class="site__header-wrap">
+            <?php
+            $locations= get_nav_menu_locations();
+
+            $menu_items= wp_get_nav_menu_items($locations['menu_header']);
+            $currentPageID = get_the_ID();
+            ?>
+
+            <?php if(count($menu_items)>0): ?>
             <div class="site__header-layout">
+
+
 
                 <!-- menu -->
                 <nav class="menu">
                     <ul>
-                        <li><a href="#">My Story</a></li>
-                        <li><a href="#">Free Cheat Sheet</a></li>
-                        <li><a href="#">Recipes</a></li>
-                        <li><a href="#">Recipe books</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact us</a></li>
+
+
+
+
+                        <?php  foreach ($menu_items as $menu_item):
+
+
+
+
+                        if($menu_item->object_id == $currentPageID) {
+                            $isCurrentPage = 'id="is-current"';
+                        } else {
+                            $isCurrentPage = '';
+
+                        }
+
+
+
+                        ?>
+
+
+                        <li>
+                            <a <?= $isCurrentPage;?> href="<?= $menu_item->url;?>">
+                                <?= $menu_item->title; ?>
+                            </a>
+                        </li>
+                <?php endforeach; ?>
                     </ul>
                 </nav>
-                <!-- /menu -->
+
 
                 <a href="#" class="btn btn_color-1"><span>Login</span></a>
 
                 <!-- site__header-fixed -->
                 <div class="site__header-fixed">
+                    <?php endif;?>
+
 
                     <a role="button" class="hamburger">
                         <span></span>

@@ -1,4 +1,4 @@
-<?php //Template Name: Page recipe
+<?php
 get_header();
 ?>
 <!-- site__content -->
@@ -11,15 +11,15 @@ get_header();
         <div class="hero-recipe__wrap">
 
             <div class="hero-recipe__picture js-back-picture">
-                <img src="pic/img-001.jpg" alt="img"/>
+                <img src="<?= get_field('recipe_image');?>" alt="img"/>
             </div>
 
             <!-- hero-recipe__content -->
             <div class="hero-recipe__content article">
 
-                <h1>Cauliflower Buffalo Wings – Vegan & Low Fat</h1>
+                <h1><?= get_the_title();?></h1>
 
-                <p>Buffalo wings, the perfect appetizer and spicy snack! One thing I missed a lot when I went vegan was these babies but guess what? We found an easy, oil free way to make them so that you can eat to your hearts content and no harm to animals was caused in the process.</p>
+                <p><?= get_field('recipe_description');?> </p>
 
                 <div class="hero-recipe__time-characteristics">
 
@@ -62,7 +62,7 @@ get_header();
         <!-- /hero-recipe__wrap -->
 
         <div class="hero-recipe__back js-back-picture">
-            <img src="img/hero-back-index.jpg" alt="img" />
+            <img src="<?= DIRECT;?>img/hero-back-index.jpg" alt="img" />
         </div>
 
     </div>
@@ -70,7 +70,7 @@ get_header();
 
     <!-- recipe-video -->
     <div class="recipe-video">
-        <iframe class="youtube-frame" src="https://www.youtube.com/embed/MGx82dfjs9I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="youtube-frame" src="https://www.youtube.com/embed/<?= get_field('recipe_video');?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     <!-- /recipe-video -->
 
@@ -85,11 +85,7 @@ get_header();
                 <dt>Wing Ingredients</dt>
                 <dd>
                     <ul>
-                        <li>1 head of cauliflower</li>
-                        <li>1 cup of flour</li>
-                        <li>2-3 cups unsweetened soy milk/ almond milk</li>
-                        <li>2 cups bread crumbs</li>
-                        <li>1 cup buffalo wing sauce – we use ranks red hot (it’s vegan)</li>
+                        <?= get_field  ('ingredients');?>
                     </ul>
                 </dd>
             </dl>
@@ -100,13 +96,7 @@ get_header();
                 <dt>Ranch Dressing Ingredients</dt>
                 <dd>
                     <ul>
-                        <li>1 cup hemp seeds</li>
-                        <li>1 tbsp maple syrup</li>
-                        <li>1 tbsp lemon juice</li>
-                        <li>1 tbsp apple cider vinegar</li>
-                        <li>1 tsp each garlic powder, onion powder, dill</li>
-                        <li>1/2 tsp salt</li>
-                        <li>1/4 cup of water</li>
+                      <?= get_field  ('ranch_dressing_ingredients');?>
                     </ul>
                 </dd>
             </dl>
@@ -124,11 +114,7 @@ get_header();
                 <h2>Instructions</h2>
 
                 <ol>
-                    <li>Preheat oven to 400F degrees or air fryer to 350F. Chop your cauliflower in to bite size pieces. You want them to be about the size of a ping pong ball. Add your flour into a large bowl and whisk in soy milk until you get a pancake batter consistency.</li>
-                    <li>Place your bread crumbs in another large bowl. Next dip each piece of cauliflower into your flour batter, tapping off any excess (it works best using a fork) and then cover with bread crumbs.</li>
-                    <li>Place your battered pieces on parchment paper if you are using an oven and place in the oven for 10 minutes or until they start to brown and get crispy. If you are using an air fryer you can put them directly in there and cook 10 minutes.</li>
-                    <li>Once the cauliflower is cooked. Place your buffalo sauce into another bowl and dip the wings into the sauce one by one and place back in the oven for another 5 minutes. Once they are cooked they are ready to eat and dip in the delicious ranch below.</li>
-                    <li>Ranch Dressing Instructions – Place all your ingredients (minus the water) in a high speed blender. Start blending and slowly add in water until you get the consistency you want. Serve with buffalo wings.</li>
+                    <?= get_field('instructions');?>
                 </ol>
 
             </div>
@@ -332,226 +318,11 @@ get_header();
     <!-- /comments-frame -->
 
     <!-- join-us -->
-    <section class="join-us">
-
-        <dl class="join-us__title">
-            <dt><h2>join us on youtube</h2></dt>
-            <dd>551,993 subscribers</dd>
-        </dl>
-
-        <div class="join-us__swiper swiper-container">
-
-            <div class="swiper-wrapper">
-
-                <!-- join-us__slide -->
-                <a href="#" class="join-us__slide swiper-slide popup__open" data-popup="join-us-video" data-video="MGx82dfjs9I">
-                    <img src="pic/video-001.jpg" alt="img" />
-                </a>
-                <!-- /mobile-app__slide -->
-
-                <!-- join-us__slide -->
-                <a href="#" class="join-us__slide swiper-slide popup__open" data-popup="join-us-video" data-video="MGx82dfjs9I">
-                    <img src="pic/video-001.jpg" alt="img" />
-                </a>
-                <!-- /mobile-app__slide -->
-
-                <!-- join-us__slide -->
-                <a href="#" class="join-us__slide swiper-slide popup__open" data-popup="join-us-video" data-video="MGx82dfjs9I">
-                    <img src="pic/video-001.jpg" alt="img" />
-                </a>
-                <!-- /mobile-app__slide -->
-
-                <!-- join-us__slide -->
-                <a href="#" class="join-us__slide swiper-slide popup__open" data-popup="join-us-video" data-video="MGx82dfjs9I">
-                    <img src="pic/video-001.jpg" alt="img" />
-                </a>
-                <!-- /mobile-app__slide -->
-
-                <!-- join-us__slide -->
-                <a href="#" class="join-us__slide swiper-slide popup__open" data-popup="join-us-video" data-video="MGx82dfjs9I">
-                    <img src="pic/video-001.jpg" alt="img" />
-                </a>
-                <!-- /mobile-app__slide -->
-
-            </div>
-
-        </div>
-
-        <a href="#" class="btn btn_color-1"><span>
-                    <svg viewBox="0 0 32 32">
-                        <g>
-                            <path d="M31.67,9.179c0,0-0.312-2.353-1.271-3.389c-1.217-1.358-2.58-1.366-3.205-1.443C22.717,4,16.002,4,16.002,4   h-0.015c0,0-6.715,0-11.191,0.347C4.171,4.424,2.809,4.432,1.591,5.79C0.633,6.826,0.32,9.179,0.32,9.179S0,11.94,0,14.701v2.588   c0,2.763,0.32,5.523,0.32,5.523s0.312,2.352,1.271,3.386c1.218,1.358,2.815,1.317,3.527,1.459C7.677,27.919,15.995,28,15.995,28   s6.722-0.012,11.199-0.355c0.625-0.08,1.988-0.088,3.205-1.446c0.958-1.034,1.271-3.386,1.271-3.386s0.32-2.761,0.32-5.523v-2.588   C31.99,11.94,31.67,9.179,31.67,9.179z" fill="#fff"/>
-                            <polygon fill="#9FB93C" points="12,10 12,22 22,16  "/>
-                        </g>
-                    </svg>
-                    View the Channel
-                </span></a>
-
-    </section>
+    <?php get_template_part ('components/content','join_global');?>
     <!-- /join-us -->
 
     <!-- follow-us -->
-    <section class="follow-us">
-
-        <h2 class="follow-us__title">Follow Us</h2>
-
-        <div class="follow-us__wrap">
-
-            <a href="#" class="follow-us__item" target="_blank" rel="nofollow">
-
-                <div class="follow-us__icon">
-                    <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-209.000000, -10454.000000)" fill-rule="nonzero">
-                                <g transform="translate(-138.000000, 8602.000000)">
-                                    <g transform="translate(265.000000, 1668.000000)">
-                                        <g transform="translate(0.000000, 11.000000)">
-                                            <g transform="translate(0.000000, 127.000000)">
-                                                <g transform="translate(52.000000, 46.000000)">
-                                                    <g transform="translate(30.000000, 0.000000)">
-                                                        <g>
-                                                            <path d="M27.9959831,55.9919662 C12.5342286,55.9919662 0,43.4577377 0,27.9959831 C0,12.5342286 12.5342286,0 27.9959831,0 C43.4577377,0 55.9919662,12.5342286 55.9919662,27.9959831 C55.9919662,43.4577377 43.4577377,55.9919662 27.9959831,55.9919662 Z M42.6463629,22.593519 C42.6463629,20.2465992 40.7450802,18.3443713 38.3994599,18.3443713 L18.4743291,18.3443713 C16.1291814,18.3443713 14.2282532,20.2470717 14.2282532,22.593519 L14.2282532,33.9877468 C14.2282532,36.3346667 16.1295359,38.2368945 18.4743291,38.2368945 L38.3991055,38.2368945 C40.7451983,38.2368945 42.6460084,36.3341941 42.6460084,33.9877468 L42.6460084,22.593519 L42.6463629,22.593519 Z M25.5945992,33.0974177 L25.5945992,22.3955105 L33.7104641,27.7467004 L25.5945992,33.0974177 Z"></path>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <p>551,993</p>
-                <p>subscribers</p>
-
-            </a>
-
-            <a href="#" class="follow-us__item" target="_blank" rel="nofollow">
-
-                <div class="follow-us__icon">
-                    <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-449.000000, -10454.000000)" fill-rule="nonzero">
-                                <g transform="translate(-138.000000, 8602.000000)">
-                                    <g transform="translate(265.000000, 1668.000000)">
-                                        <g transform="translate(0.000000, 11.000000)">
-                                            <g transform="translate(0.000000, 127.000000)">
-                                                <g transform="translate(292.000000, 46.000000)">
-                                                    <g transform="translate(30.000000, 0.000000)">
-                                                        <g>
-                                                            <path d="M27.80512,0 C12.47344,0 0,12.47344 0,27.80512 C0,43.13568 12.47344,55.61024 27.80512,55.61024 C43.13568,55.61024 55.61024,43.13568 55.61024,27.80512 C55.61024,12.47344 43.13792,0 27.80512,0 Z M34.72,28.784 L30.19632,28.784 C30.19632,36.01136 30.19632,44.90752 30.19632,44.90752 L23.49312,44.90752 C23.49312,44.90752 23.49312,36.0976 23.49312,28.784 L20.30672,28.784 L20.30672,23.08544 L23.49312,23.08544 L23.49312,19.39952 C23.49312,16.75968 24.74752,12.63472 30.25792,12.63472 L35.22512,12.65376 L35.22512,18.18544 C35.22512,18.18544 32.20672,18.18544 31.61984,18.18544 C31.03296,18.18544 30.19856,18.47888 30.19856,19.73776 L30.19856,23.08656 L35.30576,23.08656 L34.72,28.784 Z"></path>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <p>551,993</p>
-                <p>subscribers</p>
-
-            </a>
-
-            <a href="#" class="follow-us__item" target="_blank" rel="nofollow">
-
-                <div class="follow-us__icon">
-                    <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-691.000000, -10454.000000)" fill-rule="nonzero">
-                                <g transform="translate(-138.000000, 8602.000000)">
-                                    <g transform="translate(265.000000, 1668.000000)">
-                                        <g transform="translate(0.000000, 11.000000)">
-                                            <g transform="translate(0.000000, 127.000000)">
-                                                <g transform="translate(534.000000, 46.000000)">
-                                                    <g transform="translate(30.000000, 0.000000)">
-                                                        <g>
-                                                            <g>
-                                                                <path d="M27.3613334,33.0909091 C30.5176704,33.0909091 33.0909091,30.5222791 33.0909091,27.3636364 C33.0909091,26.1167734 32.6829707,24.965557 32.0076828,24.0252241 C30.9670941,22.5824584 29.2754173,21.6363636 27.3647905,21.6363636 C25.4530113,21.6363636 23.7624868,22.581306 22.7195934,24.0240717 C22.0420008,24.9644046 21.6375195,26.115621 21.6363671,27.362484 C21.63291,30.5211268 24.2038439,33.0909091 27.3613334,33.0909091 Z"></path>
-                                                                <polygon points="39.4545455 20.3466737 39.4545455 15.9300292 39.4545455 15.2727273 38.7919935 15.2748476 34.3636364 15.2886297 34.3806521 20.3636364"></polygon>
-                                                                <path d="M28,0 C12.5608636,0 0,12.5608636 0,28 C0,43.4380085 12.5608636,56 28,56 C43.4380085,56 56,43.4380085 56,28 C56,12.5608636 43.4402642,0 28,0 Z M43.9241118,24.732619 L43.9241118,37.7705631 C43.9241118,41.166519 41.1631354,43.9263675 37.7694353,43.9263675 L18.2305647,43.9263675 C14.8357367,43.9263675 12.0758882,41.166519 12.0758882,37.7705631 L12.0758882,24.732619 L12.0758882,18.2316926 C12.0758882,14.8368646 14.8357367,12.077016 18.2305647,12.077016 L37.7683074,12.077016 C41.1631354,12.077016 43.9241118,14.8368646 43.9241118,18.2316926 L43.9241118,24.732619 Z"></path>
-                                                                <path d="M36.6484995,27.5421787 C36.6484995,32.4800642 32.7701382,36.5004334 28.0016794,36.5004334 C23.2332207,36.5004334 19.355979,32.4800642 19.355979,27.5421787 C19.355979,26.354395 19.5843813,25.218809 19.9919227,24.1818182 L15.2727273,24.1818182 L15.2727273,37.5907816 C15.2727273,39.3237394 16.6308255,40.7272727 18.3024172,40.7272727 L37.6975828,40.7272727 C39.3669352,40.7272727 40.7272727,39.3237394 40.7272727,37.5907816 L40.7272727,24.1818182 L36.005838,24.1818182 C36.4167383,25.218809 36.6484995,26.354395 36.6484995,27.5421787 Z"></path>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <p>551,993</p>
-                <p>subscribers</p>
-
-            </a>
-
-            <a href="#" class="follow-us__item" target="_blank" rel="nofollow">
-
-                <div class="follow-us__icon">
-                    <svg viewBox="0 0 55.6 55.6"  xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <defs>
-                                <path id="SVGID_1_" d="M20,26.6c0.2,0.3,0.4,0.4,0.7,0.4c0.5,0,1,0,1.5,0v0.4c0,2.3,0,4.5,0,6.8c0,1,0.1,2,0.6,2.9
-                                        c0.7,1.4,1.8,2.4,3.2,3c1,0.5,2.1,0.7,3.2,0.9c0.1,0,0.1,0,0.2,0h1.8c0.5-0.1,0.9-0.1,1.4-0.2c1-0.2,1.9-0.5,2.7-1.1
-                                        c0.1-0.1,0.3-0.3,0.4-0.4V39c-0.2-0.5-0.3-0.9-0.5-1.4c-0.2-0.7-0.4-1.3-0.6-2c-0.2-0.5-0.4-0.6-0.9-0.4c-0.6,0.2-1.1,0.3-1.8,0.3
-                                        c-0.9-0.1-1.6-0.8-1.6-1.6c0-2.2,0-4.5,0-6.7c0,0,0-0.1,0-0.1h0.3c1.2,0,2.3,0,3.5,0c0.5,0,0.7-0.2,0.7-0.7c0-1.4,0-2.7,0-4.1
-                                        c0-0.5-0.2-0.7-0.7-0.7c-1.1,0-2.3,0-3.4,0h-0.4v-0.3c0-1.5,0-3,0-4.5c0-0.3-0.1-0.6-0.4-0.7h-4.4c-0.3,0.2-0.4,0.4-0.4,0.7
-                                        c-0.1,1.5-0.9,2.7-1.9,3.7c-0.8,0.8-1.7,1.5-2.8,2c-0.1,0.1-0.2,0.2-0.3,0.3V26.6z M27.8,0c15.3,0,27.8,12.5,27.8,27.8
-                                        c0,15.3-12.5,27.8-27.8,27.8C12.5,55.6,0,43.1,0,27.8C0,12.5,12.5,0,27.8,0z"/>
-                            </defs>
-                            <use xlink:href="#SVGID_1_"  overflow="visible"/>
-                            <clipPath id="SVGID_2_">
-                                <use xlink:href="#SVGID_1_"  overflow="visible"/>
-                            </clipPath>
-                            <rect x="-5" y="-5" clip-path="url(#SVGID_2_)" width="65.6" height="65.6"/>
-                        </g>
-                    </svg>
-                </div>
-                <p>551,993</p>
-                <p>subscribers</p>
-
-            </a>
-
-            <a href="#" class="follow-us__item" target="_blank" rel="nofollow">
-
-                <div class="follow-us__icon">
-                    <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-1172.000000, -10454.000000)" fill-rule="nonzero">
-                                <g transform="translate(-138.000000, 8602.000000)">
-                                    <g transform="translate(265.000000, 1668.000000)">
-                                        <g transform="translate(0.000000, 11.000000)">
-                                            <g transform="translate(0.000000, 127.000000)">
-                                                <g transform="translate(1015.000000, 46.000000)">
-                                                    <g transform="translate(30.000000, 0.000000)">
-                                                        <g>
-                                                            <path d="M28,0 C12.5363137,0 0,12.5363137 0,28 C0,43.4635948 12.5363137,56 28,56 C43.4635948,56 56,43.4635948 56,28 C56,12.5363137 43.4635948,0 28,0 Z M30.576,36.4788758 C28.5065621,36.4788758 26.559281,35.336 25.8898431,34.0377516 C25.8898431,34.0377516 24.7774379,38.5483137 24.540719,39.4188758 C24.1435948,40.8901569 23.3774379,42.3589673 22.6671895,43.5222484 C21.6541569,44.8458431 20.4857516,43.8633725 20.3457516,42.656719 C20.3,41.312719 20.3483137,39.7218431 20.6817516,38.2735294 C21.0508758,36.6852157 23.1483137,27.6055294 23.1483137,27.6055294 C23.1483137,27.6055294 22.5348758,26.3556863 22.5348758,24.5076863 C22.5348758,21.6058431 24.1818431,19.4396863 26.2334379,19.4396863 C27.9770327,19.4396863 28.8195948,20.7786536 28.8195948,22.3796863 C28.8195948,24.1691242 27.7021569,26.8469673 27.1268758,29.3262484 C26.6457516,31.4033725 28.1475948,33.0960915 30.1534379,33.0960915 C33.7857516,33.0960915 36.2345621,28.3309673 36.2345621,22.6876863 C36.2345621,18.3960915 33.4039085,15.1862484 28.2545621,15.1862484 C22.4381569,15.1862484 18.8134379,19.615281 18.8134379,24.5611242 C18.8134379,26.2665621 19.304719,27.4705621 20.0785621,28.3996863 C20.4324052,28.8273725 20.483281,29.0004052 20.3534379,29.4917778 C20.2618431,29.8532157 20.0505621,30.7186536 19.964,31.0622484 C19.836719,31.5586536 19.4421569,31.7343399 19.0043137,31.5510588 C16.324,30.4335294 15.076719,27.4375294 15.076719,24.0724967 C15.076719,18.5106536 19.671281,11.8415294 28.7814379,11.8415294 C36.1021569,11.8415294 40.920719,17.2506536 40.920719,23.0568105 C40.9231895,30.7414379 36.7410327,36.4788758 30.576,36.4788758 Z"></path>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <p>551,993</p>
-                <p>subscribers</p>
-
-            </a>
-
-        </div>
-
-    </section>
+    <?php get_template_part ('components/content','follow_global');?>
     <!-- /follow-us -->
 
 </div>
