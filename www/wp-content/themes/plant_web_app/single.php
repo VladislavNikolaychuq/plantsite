@@ -153,9 +153,8 @@ get_header();
             </div>
             <!-- /comments-frame -->
 
-            <!-- follow-us -->
+
             <?php get_template_part ('components/content','follow_global');?>
-            <!-- follow-us -->
 
 
         </div>
