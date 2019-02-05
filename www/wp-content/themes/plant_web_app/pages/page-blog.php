@@ -24,12 +24,14 @@ get_header();
 
     <!-- categories -->
     <div class="categories">
-
         <div class="categories__wrap">
-            <a href="#" role="radio" class="categories__item is-active" data-id="001">Recent Stories</a>
-            <a href="#" role="radio" class="categories__item" data-id="002">Inspiring Stories From Real People</a>
-            <a href="#" role="radio" class="categories__item" data-id="003">Media About Plant</a>
+            <?php $categories= get_categories();
+
+            foreach   ($categories as $category): ?>
+            <a href="#" role="radio" class="categories__item" data-id="<?= $category->term_id;?>"><?= $category->name ?></a>
+        <?php endforeach;?>
         </div>
+
 
     </div>
     <!-- /categories -->

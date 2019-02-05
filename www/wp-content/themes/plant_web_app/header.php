@@ -31,7 +31,7 @@
 
     <?php wp_head();?>
 </head>
-<body data-action="php/free-recipes.json">
+<body data-action="<?= admin_url('admin-ajax.php'); ?>">
 
 <div class="preload">
     <div class="preload__book">
